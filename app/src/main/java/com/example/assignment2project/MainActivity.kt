@@ -84,12 +84,19 @@ class MainActivity : ComponentActivity() {
             }) {
                 Text("Start Activity Explicitly")
             }
+
             Button(onClick = {
                 startActivity(Intent().apply {
                     action = "com.example.assignment2project.SecondActivity"
                 })
             }) {
                 Text("Start Activity Implicitly")
+            }
+
+            Button(onClick = {
+                startActivity(Intent(this@MainActivity, ImageActivity::class.java))
+            }) {
+                Text("View Image Activity")
             }
         }
     }
